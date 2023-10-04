@@ -33,7 +33,7 @@ if (!defined("PLUGIN_RESOURCES_DIR")) {
    define("PLUGIN_RESOURCES_DIR", Plugin::getPhpDir("resources"));
    define("PLUGIN_RESOURCES_NOTFULL_DIR", Plugin::getPhpDir("resources",false));
    define("PLUGIN_RESOURCES_WEBDIR", Plugin::getWebDir("resources"));
-   define("PLUGIN_RESOURCES_NOTFULL_WEBDIR", Plugin::getWebDir("resources",false));
+   define("PLUGIN_RESOURCES_NOTFULL_WEBDIR", "/".Plugin::getWebDir("resources",false));
 }
 
 // Init the hooks of the plugins -Needed
@@ -209,7 +209,7 @@ function plugin_version_resources() {
       'homepage'     => 'https://github.com/InfotelGLPI/resources',
       'requirements' => [
          'glpi' => [
-            'min' => '10.0',
+            'min' => '9.5',
             'max' => '11.0',
             'dev' => false
          ]
